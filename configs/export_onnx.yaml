@@ -1,0 +1,17 @@
+# ===============================
+# ONNX Export Configuration
+# ===============================
+
+model:
+  weights: ../../models/pytorch/best.pt
+  device: cuda
+
+export:
+  format: onnx
+  imgsz: 640
+  opset: 13
+  dynamic: true        # Jetson, TensorRT용 권장
+  simplify: true       # onnx graph 정리
+  half: false          # FP32 ONNX
+  nms : true          # NMS 포함 여부
+  output_dir: ../../models/onnx

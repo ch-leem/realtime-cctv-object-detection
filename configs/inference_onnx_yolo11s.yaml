@@ -1,0 +1,40 @@
+# ===============================
+# Inference Configuration (RCOD - ONNX)
+# ===============================
+
+model:
+  onnx_dir: ../../models/onnx
+  onnx_path: ../../models/onnx/yolo11s_FP32.onnx
+  device: cuda
+  provider: CUDAExecutionProvider   # CUDAExecutionProvider | CPUExecutionProvider
+
+data:
+  test_dir: ../../data/rcod/images/val_fold1
+  gt_json: ../../data/rcod/json/val_fold1.json
+  img_width: 1920
+  img_height: 1200
+  image: ../../data/rcod/images/val_fold1/0000000031.jpg
+  names:
+    - bus
+    - car
+    - sign
+    - truck
+    - human
+    - special_vehicles
+    - taxi
+    - motorcycle
+    
+inference:
+  imgsz: 640
+  conf_thres: 0.25
+  iou_thres: 0.5
+  warmup: 10
+  repeat: 1          # stream inference라면 1
+
+evaluation:
+  iou_threshold: 0.5
+  ap_log: ap_info_onnx.txt
+
+output:
+  output_dir: ./outputs_onnx
+  vis_output: ./outputs_onnx/test.jpg
