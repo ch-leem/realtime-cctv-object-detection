@@ -7,7 +7,7 @@ import yaml
 # -------------------------
 # Load config
 # -------------------------
-with open("configs/train_yolo11s.yaml", "r") as f:
+with open("../../configs/train_yolo11s.yaml", "r") as f:
     cfg = yaml.safe_load(f)
 
 model_cfg = cfg["model"]

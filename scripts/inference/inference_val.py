@@ -28,7 +28,7 @@ def compute_iou(box1, box2):
 # Main
 # ===============================
 def main():
-    cfg = load_yaml("./configs/inference_yolo11s.yaml")
+    cfg = load_yaml("../../configs/inference_yolo11s.yaml")
 
     weights_dir = cfg["model"]["weights_dir"]
     device = cfg["model"]["device"]
