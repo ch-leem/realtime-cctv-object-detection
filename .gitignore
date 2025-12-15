@@ -136,3 +136,4 @@ args.yaml
 runs/
 outputs/
 data/
+ultralytics/
