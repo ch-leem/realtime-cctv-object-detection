@@ -1,0 +1,28 @@
+# =========================
+# Model
+# =========================
+model:
+  cfg: yolo11s.yaml
+  weights: ultralytics/yolo11s.pt
+  save_dir: runs/train/yolo11s
+
+# =========================
+# Dataset
+# =========================
+data:
+  path: /workspace/re/data/rcod/yaml/dataset_fold1.yaml
+
+# =========================
+# Training
+# =========================
+training:
+  epochs: 100
+  imgsz: 640
+  batch: 8
+  device: cuda
+
+# =========================
+# Augmentation
+# =========================
+augmentation:
+  use_weather_aug: false
