@@ -10,7 +10,7 @@ model:
 # Dataset
 # =========================
 data:
-  path: /workspace/re/data/rcod/yaml/dataset_fold1.yaml
+  path: ../../data/rcod/yaml/dataset_fold1.yaml
 
 # =========================
 # Training
