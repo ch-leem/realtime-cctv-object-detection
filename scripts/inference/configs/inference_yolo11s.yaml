@@ -3,13 +3,13 @@
 # ===============================
 
 model:
-  weights_dir: /workspace/re/realtime-cctv-object-detection/yolo11s/train/runs/detect/train/weights
+  weights_dir: ../../models/pytorch
   device: cuda
   half: false        # FP16 inference 여부
 
 data:
-  test_dir: /workspace/re/data/rcod/images/val_fold1
-  gt_json: /workspace/re/data/rcod/json/val_fold1.json
+  test_dir: ../../data/rcod/images/val_fold1
+  gt_json: ../../data/rcod/json/val_fold1.json
   img_width: 1920
   img_height: 1200
 
