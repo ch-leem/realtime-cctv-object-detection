@@ -1,0 +1,10 @@
+data:
+  train_img : ../../data/rcod/train # 이미지가 저장된 디렉토리 경로
+  train_json: ../../data/rcod/train.json # 원본 JSON 파일 경로
+  filtered_json: ../../data/rcod/filtered_train.json # 필터링된 JSON 파일 경로
+
+dir:
+  json_dir: ../../data/rcod/json # JSON 파일이 저장될 디렉토리 경로
+  yaml_dir: ../../data/rcod/yaml # YOLO 형식의 YAML 파일이 저장될 디렉토리 경로
+  images_dir: ../../data/rcod/images # YOLO 형식의 이미지 파일이 저장될 디렉토리 경로
+  labels_dir: ../../data/rcod/labels # YOLO 형식의 라벨 파일이 저장될 디렉토리 경로

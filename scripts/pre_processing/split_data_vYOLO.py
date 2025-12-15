@@ -157,7 +157,7 @@ if __name__ == "__main__":
         # YAML 설정 파일 생성
         os.makedirs(yaml_dir, exist_ok=True)
         dataset_config = {
-            'path': '/workspace/re/data/rcod',
+            'path': '../../data/rcod',
             'train': f'images/train_fold{fold}',
             'val': f'images/val_fold{fold}',
             'nc': len(categories),
