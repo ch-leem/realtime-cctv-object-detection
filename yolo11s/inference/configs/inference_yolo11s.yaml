@@ -1,0 +1,27 @@
+# ===============================
+# Inference Configuration (RCOD)
+# ===============================
+
+model:
+  weights_dir: /workspace/re/realtime-cctv-object-detection/yolo11s/train/runs/detect/train/weights
+  device: cuda
+  half: false        # FP16 inference 여부
+
+data:
+  test_dir: /workspace/re/data/rcod/images/val_fold1
+  gt_json: /workspace/re/data/rcod/json/val_fold1.json
+  img_width: 1920
+  img_height: 1200
+
+inference:
+  imgsz: 640
+  conf_thres: 0.25
+  iou_thres: 0.5
+  stream: true
+
+evaluation:
+  iou_threshold: 0.5
+  ap_log: ap_info.txt
+
+output:
+  output_dir: ./outputs
