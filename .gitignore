@@ -128,6 +128,8 @@ gyeonggi_AD_competition/
 *.pt
 *.jpg
 *.png
+!img/
+!img/*.png
 *.csv
 *.out
 args.yaml
